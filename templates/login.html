@@ -1,0 +1,55 @@
+<head>
+    <title>Here's Your School Photo</title>
+</head>
+<body style="display:block;margin-left:auto;margin-right:auto;">
+    <style>
+        .btn{
+            color: #3498db;
+            border: 1px solid #3498db;
+            background: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: "inter";
+            font-weight: 400; 
+            font-style: normal; 
+            font-stretch: normal;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn:hover{
+            color: #ffffff;
+            border: 1px solid #cccccc;
+            background: #3498db;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: "inter";
+            font-weight: 400; 
+            font-style: normal; 
+            font-stretch: normal;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+    <h1 style="display:block;margin-left:auto;margin-right:auto;text-align:center;font-family:inter;font-weight: 400; font-style: normal; font-stretch: normal;">{{ header }}</h1>
+    <form method="POST" style="display:block;margin-left:auto;margin-right:auto;">
+        <div style="display:block;margin-left:auto;margin-right:auto;">
+            <input style="display:block;margin-left:auto;margin-right:auto;" class="btn" type="username" name="username" placeholder="Username" autocomplete="false" required>
+        </div>
+        <div style="display:block;margin-left:auto;margin-right:auto;">
+            <input style="display:block;margin-left:auto;margin-right:auto;" class="btn" type="password" name="password" placeholder="Password" autocomplete="false" required>
+        </div>
+        <div style="display:block;margin-left:auto;margin-right:auto;">
+            <input style="display:block;margin-left:auto;margin-right:auto;" class="btn" type="submit" value="Submit">
+        </div>
+    </form>
+    <a style="display:block;margin-left:auto;margin-right:auto;text-align:center;font-family:inter;font-weight: 400; font-style: normal; font-stretch: normal;" href='{{ switchTo }}'><p>{{ switchToText }}</p></a>
+    {{ error|safe }}
+    <p></p>
+    <a style="display:block;margin-left:auto;margin-right:auto;text-align:center;font-family:inter;font-weight: 400; font-style: normal; font-stretch: normal;" href="https://heresyourschoolphoto.win/static"><p>Want to See the Source Code?</p></a>
+</body>

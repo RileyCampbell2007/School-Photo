@@ -1,0 +1,30 @@
+<head>
+    <title>Here's Your School Photo</title>
+</head>
+
+<table width="100%">
+    <tr width="100%">
+        <td width="50%">
+            <form action="{{ action }}" method="POST">
+                <select name="method">
+                    <option value="id" id="id">ID</option>
+                    <option value="name" id="name" selected>Name</option>
+                    <option value="grade" id="grade">Grade</option>
+                    <option value="email" id="email">Email</option>
+                </select>
+                <input type="text" name="text_string" placeholder="Enter a search term" required value="{{ text }}">
+                <input type="submit" value="Submit">
+            </form>
+        </td>
+        <td width="50%">
+            <a href="/" style="float:right; padding:10px; padding-top: 0px; padding-bottom: 0px;"><p>Home</p></a>
+            <a href="/favorites" style="float:right; padding:10px; padding-top: 0px; padding-bottom: 0px;"><p>Favorites</p></a>
+            <a href="/logout" style="float:right; padding:10px; padding-top: 0px; padding-bottom: 0px;"><p>Logout</p></a>
+        </td>
+    </tr>
+</table>
+<script>
+    const method = new URLSearchParams(window.location.search).get('method')
+    document.getElementById(method).selected = true;
+</script>
+

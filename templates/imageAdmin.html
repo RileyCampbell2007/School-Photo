@@ -1,0 +1,12 @@
+<div style="border:1px solid black; padding: 5px;">
+    <p>ID: {{ ID }}</p>
+    <p>Name: {{ name }}</p>
+    <p>Grade: {{ grade }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Last Login Time: {{ lastLoginTime }}</p>
+    <p>Known IP Addresses: {{ ipAddresses }}</p>
+    <p>Is Admin?: {{ admin }}</p>
+    <p>Search History: <a href="/searchHistory?name={{ ID }}">Here</a></p>
+    <p>Favorites: <a href="/favorites?override={{ ID }}">Here</a></p>
+    <img src="{{ image }}" width=200>
+</div>
